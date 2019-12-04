@@ -8,17 +8,17 @@ import NotFound from './pages/NotFound'
 const App = () => {
   return (
     <Router>
-      <header>
+      <header className="displayNone">
         <h1>Welcome to my SPA</h1>
         <nav>
           <ul>
-            <li>
+            <li className="displayNone">
               <Link to="/">Go Home</Link>
             </li>
-            <li>
+            <li className="displayNone">
               <Link to="/1">Page 1</Link>
             </li>
-            <li>
+            <li className="displayNone">
               <Link to="/2">Page 2</Link>
             </li>
           </ul>

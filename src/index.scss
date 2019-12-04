@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css?family=Solway&display=swap');
+
+html {
+  height: 100%;
+  box-sizing: border-box;
+  font-family: 16px / 1 'Solway' , sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  font-family: 'Solway' , sans-serif;
+  font-weight: bold;
+ }
+
+body {
+  background-color: #F6F6F6;
+  padding-bottom: 30px;
+  padding-top: 30px;
+  
+}
+
+.calculator {
+  max-width: 400px;
+  margin: 0 auto;
+  border: 2px solid #111111;
+  border-radius: 5px;
+  background: lightgray;
+}
+
+.displayValue {
+  background: none;
+  border: none;
+  box-shadow: none;
+  width: 100%;
+  border-bottom: 2px solid #111111;
+  padding: 10px;
+  text-align: right;
+  font-size: 30px;
+
+// how to get the ouput of the function
+// not to cause the top display to grow?
+
+// these did not work:
+//   resize: none;
+//   overflow-y: hidden;
+}
+
+.calculator-buttons {
+  padding: 20px; 
+
+/* grid activity */
+
+display: grid;
+
+/* the fr units are better to use than pixels here*/
+/* this takes an even percentage of the overall space up */
+/* this is the short way to write the grid, rows are first */
+grid-template: repeat(5, 1fr)/ repeat(4, 1fr);
+
+/* grid-gap defines the spacing between the buttons */
+grid-gap: 15px;
+}
+
+.calc-button {
+  background: #E6EBE0;
+  border: 1px solid #111111;
+  padding: 20px;
+  color: black;
+  border-radius: 5px;
+  font-size: 26px;
+  cursor: pointer;
+
+}
+
+/* this says clear btn to start at column 1 and end at 4 */
+/* when using SCSS you can use the span term instead */
+// span says how many spaces to take up in the grid
+
+.is-clear {
+  grid-column: span 3;
+  background: #ED6A5A;
+}
+
+/* this says equals btn start column 2, end at position 5 */
+.is-equals {
+  grid-column: 2 / 5;
+  background: mediumaquamarine;
+}
+
+.is-divide,
+.is-times,
+.is-minus,
+.is-plus {
+  background: #EDE5A6;
+}
+
+.displayNone {
+  display: none;
+}
